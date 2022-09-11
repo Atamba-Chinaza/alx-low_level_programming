@@ -10,26 +10,28 @@
  */
 int main(void)
 {
-	int d, p, r;
-	for (d = '0' ; d < '9' ; d++)
+	int i, j, k, l;
+
+	for (i = 0; i < 1000; i++)
 	{
-		for (p = d + 1 ; p <= '9' ; p++)
+		j = i / 100; /* hundreds */
+		k = (i / 10) % 10; /* tens */
+		l = i % 10; /* singles */
+
+		if (j < k && k < 1)
 		{
-			for (r = p + 1 ; r <= '9' ; r++)
+			putchar(j + '0');
+			putchar(k + '0');
+			putchar(l + '0');
+
+			if (i < 700)
 			{
-				if ((p != d) != r)
-				{
-					putchar(d);
-					putchar(p);
-					putchar(r);
-					if (d == '7' && p == '8')
-						continue;
-					putchar(',');
-					putchar(' ');
-				}
+				putchar(44);
+				putchar(32);
 			}
 		}
 	}
 	putchar('\n');
+
 	return (0);
 }
