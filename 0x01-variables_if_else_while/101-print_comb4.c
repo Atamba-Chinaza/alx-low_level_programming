@@ -1,37 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
 /**
- * main - prints different combinations of three numbers
- * 
+ * main - prints diferent combinations of three numbers
+ *
  * Return: 0
  *
  */
 int main(void)
 {
-	int i, j, k, l;
+	int d, p, r;
 
-	for (i = 0; i < 1000; i++)
+	for (d = '0' ; d < '9' ; d++)
 	{
-		j = i / 100; /* hundreds */
-		k = (i / 10) % 10; /* tens */
-		l = i % 10; /* singles */
-
-		if (j < k && k < 1)
+		for (p = d + 1 ; p <= '9' ; p++)
 		{
-			putchar(j + '0');
-			putchar(k + '0');
-			putchar(l + '0');
-
-			if (i < 700)
+			for (r = p + 1 ; r <= '9' ; r++)
 			{
-				putchar(44);
-				putchar(32);
+				if ((p != d) != r)
+				{
+					putchar(d);
+					putchar(p);
+					putchar(r);
+					if (d == '7' && p == '8')
+						continue;
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
 	putchar('\n');
-
 	return (0);
 }
