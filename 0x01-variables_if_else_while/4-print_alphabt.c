@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
  * main - Prints all the letters except q and e
- * Description: you can only use `putchar` to print letter 'q' and 'e'
  *
+ * Description: you can only use `putchar` to print letter 'q' and 'e'
  * Returns: 0
  *
  */
