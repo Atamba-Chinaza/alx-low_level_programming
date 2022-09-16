@@ -9,7 +9,7 @@
 
 void print_most_numbers(void)
 {
-	intn;
+	int n;
 
 	for (n = 48; n < 58; n++)
 	{
