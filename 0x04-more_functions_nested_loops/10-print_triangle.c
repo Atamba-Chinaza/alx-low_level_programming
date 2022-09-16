@@ -4,6 +4,7 @@
 /**
  * print_triangle - checks for checks for a digit (0 through 9).
  * @size: - variable
+ *
  * Return: Always 0
  */
 void print_triangle(int size)
