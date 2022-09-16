@@ -5,7 +5,7 @@
  * print_square - prints squares
  * @size: parameter
  *
- * Return: returns noting
+ * Return: Always 0
  */
 
 void print_square(int size)
@@ -14,7 +14,7 @@ void print_square(int size)
 
 	if (size > 0)
 	{
-		for (inc1 = 1; inc1 < size; inc1++)
+		for (inc1 = 1; inc1 <= size; inc1++)
 		{
 			for (inc2 = 1; inc2 <= size; inc2++)
 			{
