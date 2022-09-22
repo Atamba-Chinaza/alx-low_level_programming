@@ -5,7 +5,7 @@
  *
  * @str: s is the array
  *
- * Return:  0.
+ * Return: 0.
  */
 char *rot13(char *str)
 {
@@ -15,7 +15,7 @@ char *rot13(char *str)
 
 	for (; str[i] != '\0'; i++)
 	{
-		for (k = 0; k <= 51; k++)
+		for (k = 0; k <= 13; k++)
 		{
 			if (s[k] == str[i])
 			{
