@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * rot13 - Function that reverses the content of an array of integers.
  *
@@ -15,7 +15,7 @@ char *rot13(char *str)
 
 	for (; str[i] != '\0'; i++)
 	{
-		for (k = 0; k <= 13; k++)
+		for (k = 0; k <= 51; k++)
 		{
 			if (s[k] == str[i])
 			{
