@@ -1,22 +1,30 @@
 #include "main.h"
-
 /**
- * print_chessboard - prints the chessboard
- * @a: input pointer.
- * Return: no return.
+ * print_diagsums - prints buffer in hexa
+ * @a: cheese
+ * @size: buffer2
+ *
+ * Return: Nothing.
  */
-void print_chessboard(char (*a)[8])
+void print_diagsums(int *a, int size)
 {
-	unsigned int i, m = 0;
+	int i, j, s = 0, t = 0;
 
-	for (i = 0; i < 64; i++)
+	for (i = 0; i < size; i++)
 	{
-		if (i % 8 == 0 && i != 0)
+		for (j = 0; j < size; j++)
 		{
-			m = i;
-			_putchar('\n');
+			if (i == j)
+			{
+				s = s + a[(size + 1) * i];
+			}
+			if (i + j == size - 1)
+			{
+				t = t + a[(size - 1) * (i + 1)];
+			}
 		}
-		_putchar(a[i / 8][i - m]);
 	}
-	_putchar('\n');
+	printf("%i, %i\n", s, t);
 }
+Footer
+
