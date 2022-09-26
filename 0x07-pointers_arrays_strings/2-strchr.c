@@ -1,20 +1,23 @@
-include "main.h"
+#include "main.h"
 
 /**
- * _strchr - prints buffer in hexa
- * @s: buffer
- * @c: buffer2
+ * _strchr - Locates a character in a string.
+ * @s: The string to be searched.
+ * @c: The character to be located.
  *
- * Return: Nothing.
+ * Return: If c is found - a pointer to the first occurence.
+ * If c is not found - NULL.
  */
 char *_strchr(char *s, char c)
 {
-	while (*s != c)
+	int index;
+
+	for (index = 0; s[index] >= '\0'; index++)
 	{
-		if (!*s++)
-		{
-			return (0);
-		}
+		if (s[index] == c)
+			return (s + index);
 	}
-		return (s);
+
+
+	return ('\0');
 }
