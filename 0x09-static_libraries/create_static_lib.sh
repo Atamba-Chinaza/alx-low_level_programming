@@ -1,2 +1,2 @@
 #!/bin/bash
-cc -fPIC -c *.c && ar rc liball.a *.o
+cc -create_static_lib.sh -c *.c && ar rc liball.a *.o
